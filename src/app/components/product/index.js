@@ -6,7 +6,7 @@ import { useParams } from 'react-router';
 import { Link } from "react-router-dom";
 const Product=(props)=>{
     const { slug } = useParams();
-    const { product_detail,getProductDetail,getCartTokenID,decrementQuntity,incrementQuntity,cart_token_id,product_item_quntity,cart_items,addItemToCart }=props;
+    const { product_detail,getProductDetail,getCartTokenID,decrementQuntity,incrementQuntity,cart_token_id,product_item_quntity,addItemToCart }=props;
 
     useEffect(()=>{
         getProductDetail(slug);
@@ -73,7 +73,7 @@ const Product=(props)=>{
                                             <img src="/images/product-detail-slider-img-5.jpg" alt="" />
                                         </div>
                                         <div>
-                                            <iframe src="https://player.vimeo.com/video/178051337" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture"></iframe>
+                                            <iframe title="productIframe" src="https://player.vimeo.com/video/178051337" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture"></iframe>
                                         </div>
                                     </div>						
                                 </div>					
@@ -83,11 +83,11 @@ const Product=(props)=>{
                                     <h2>{product_detail.name}</h2>
                                     <h5>{product_detail.price.formatted_with_symbol}</h5>
                                     <div className="p-ratings">
-                                        <a href="#"><img src="/images/star1.svg" alt="Star" /></a>
-                                        <a href="#"><img src="/images/star1.svg" alt="Star" /></a>
-                                        <a href="#"><img src="/images/star1.svg" alt="Star" /></a>
-                                        <a href="#"><img src="/images/star2.svg" alt="Star" /></a>
-                                        <a href="#"><img src="/images/star2.svg" alt="Star" /></a>
+                                        <a href="#productStarReview"><img src="/images/star1.svg" alt="Star" /></a>
+                                        <a href="#productStarReview"><img src="/images/star1.svg" alt="Star" /></a>
+                                        <a href="#productStarReview"><img src="/images/star1.svg" alt="Star" /></a>
+                                        <a href="#productStarReview"><img src="/images/star2.svg" alt="Star" /></a>
+                                        <a href="#productStarReview"><img src="/images/star2.svg" alt="Star" /></a>
                                         <span>3/5</span>
                                     </div>
                                     {/* <div className="p-color-size">
@@ -164,9 +164,9 @@ const Product=(props)=>{
                                             <div className="form-group mb-0">
                                                 <label>Qty</label>
                                                 <div className="qty-select">
-                                                    <a onClick={decrementQuntity}><img src="/images/minus-icon2.svg" alt="Minus" /></a>
+                                                    <a href="#decrementQuntity" onClick={decrementQuntity}><img src="/images/minus-icon2.svg" alt="Minus" /></a>
                                                     <input type="text" name="" value={product_item_quntity||1} className="form-control" readOnly/>
-                                                    <a onClick={incrementQuntity}><img src="/images/plus-icon2.svg" alt="Plus" /></a>
+                                                    <a href="#incrementQuntity" onClick={incrementQuntity}><img src="/images/plus-icon2.svg" alt="Plus" /></a>
                                                 </div>
                                             </div>								
                                         </div>

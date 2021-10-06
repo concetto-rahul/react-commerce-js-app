@@ -50,7 +50,7 @@ const Cart=(props)=>{
                                                         return(
                                                             <tr key={cart_item.id}>
                                                                 <td className="text-center v-align-middle">
-                                                                    <a onClick={()=>removeItemFromCart(cart_item.id)} className="remove-product"><img src="/images/close.svg" alt="" /></a>
+                                                                    <a href="#removeCartItem" onClick={()=>removeItemFromCart(cart_item.id)} className="remove-product"><img src="/images/close.svg" alt="" /></a>
                                                                 </td>
                                                                 <td className="text-center">
                                                                     <img src={cart_item.image.url} alt="" className="product-img" />

@@ -19,22 +19,22 @@ const Header=(props)=>{
                             <Link className="navbar-brand" to="/"><img src="/images/logo.svg" alt="Logo" /></Link>
                             <ul className="list-group list-group-horizontal list-inline header-top-list align-items-center">
                                 <li>
-                                    <a href="#"><img src="/images/search-icon.svg" alt="Search" /></a>
+                                    <Link to="/"><img src="/images/search-icon.svg" alt="Search" /></Link>
                                 </li>
                                 <li>
-                                    <a href="#"><img src="/images/login-icon.svg" alt="Login" /></a>
+                                    <Link to="/"><img src="/images/login-icon.svg" alt="Login" /></Link>
                                 </li>
                                 <li>
-                                    <a href="#"><img src="/images/wishlist-icon.svg" alt="Wishlist" /></a>
+                                    <Link to="/"><img src="/images/wishlist-icon.svg" alt="Wishlist" /></Link>
                                 </li>
                                 <li className="cart-basket">
                                     <Link to="/cart"><img src="/images/cart-icon.svg" alt="Cart" /><span>{cart_items.total_unique_items||0}</span></Link>
                                 </li>
                                 <li>
-                                    <a href="#"><img src="/images/chat-icon.svg" alt="Chat" /></a>
+                                    <Link to="/"><img src="/images/chat-icon.svg" alt="Chat" /></Link>
                                 </li>
                                 <li className="d-none d-md-block">
-                                    <a href="#" className="btn btn-outline-primary btn-sm">Seller Login</a>
+                                    <Link to="/" className="btn btn-outline-primary btn-sm">Seller Login</Link>
                                 </li>
                             </ul>
                         </div>
@@ -59,24 +59,24 @@ const Header=(props)=>{
                                     })
                                 }
                                 <li className="nav-item d-md-none">
-                                    <a href="#" className="nav-link btn btn-secondary">Seller Login</a>
+                                    <Link to="/" className="nav-link btn btn-secondary">Seller Login</Link>
                                 </li>	
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#"><img src="/images/live-stream-icon.svg" alt="Live Stream" /> Live Stream</a>
+                                    <Link className="nav-link" to="/"><img src="/images/live-stream-icon.svg" alt="Live Stream" /> Live Stream</Link>
                                 </li>				        
                             </ul>
                             <ul className="list-group list-group-horizontal list-inline social-media-list">
                                 <li>
-                                    <a href="#"><img src="/images/facebook-icon.svg" alt="Facebook" /></a>
+                                    <a href="https://www.facebook.com" rel="noreferrer" target="_blank"><img src="/images/facebook-icon.svg" alt="Facebook" /></a>
                                 </li>
                                 <li>
-                                    <a href="#"><img src="/images/instagram-icon.svg" alt="Instagram" /></a>
+                                    <a href="https://www.instagram.com" rel="noreferrer" target="_blank"><img src="/images/instagram-icon.svg" alt="Instagram" /></a>
                                 </li>
                                 <li>
-                                    <a href="#"><img src="/images/twitter-icon.svg" alt="Twitter" /></a>
+                                    <a href="https://twitter.com" rel="noreferrer" target="_blank"><img src="/images/twitter-icon.svg" alt="Twitter" /></a>
                                 </li>
                                 <li>
-                                    <a href="#"><img src="/images/youtube-icon.svg" alt="Youtube" /></a>
+                                    <a href="https://www.youtube.com" rel="noreferrer" target="_blank"><img src="/images/youtube-icon.svg" alt="Youtube" /></a>
                                 </li>
                             </ul>
                         </div>
@@ -92,14 +92,13 @@ const mapStateToProps = (state) => {
         categories:state.home.categories,
         categories_error:state.home.categories_error,
         categories_success:state.home.categories_success,
-        categories_success:state.home.categories_success,
         cart_items:state.cart.cart_items,
     }
 }
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        fechCategoriesList: () => dispatch(fechCategoriesList())
+        fechCategoriesList: () => dispatch(fechCategoriesList()),
     }
 }
 

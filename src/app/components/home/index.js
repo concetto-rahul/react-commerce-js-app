@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { useEffect } from "react";
 
 import FeaturedProducts from "./FeaturedProducts";
 import Slider from "./Slider";

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useCallback } from "react";
 import { commerce } from "../../../config/commerce";
 
 export const CATEGORIES_LIST="CATEGORIES_LIST";

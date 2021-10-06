@@ -25,7 +25,7 @@ const Category=(props)=>{
                     <div className="row">
                         <div className="col-xl-12">
                             <ol className="breadcrumb">
-                                <li className="breadcrumb-item"><a href="/">Home</a></li>
+                                <li className="breadcrumb-item"><Link to="/">Home</Link></li>
                                 {
                                     category_detail.name?
                                     <li className="breadcrumb-item active" aria-current="page">{category_detail.name}</li>
@@ -86,13 +86,13 @@ const Category=(props)=>{
                                                     </ul>
                                                     <ul className="list-group list-group-horizontal list-inline justify-content-center product-colors">
                                                         <li>
-                                                            <a href="#"><span style={{background:"#85411A"}}></span></a>
+                                                            <a href="#itemcolor"><span style={{background:"#85411A"}}></span></a>
                                                         </li>
                                                         <li>
-                                                            <a href="#"><span style={{background:"#EE4567"}}></span></a>
+                                                            <a href="#itemcolor"><span style={{background:"#EE4567"}}></span></a>
                                                         </li>
                                                         <li>
-                                                            <a href="#"><span style={{background:"#1E7E9C"}}></span></a>
+                                                            <a href="#itemcolor"><span style={{background:"#1E7E9C"}}></span></a>
                                                         </li>
                                                     </ul>
                                                     <div className="product-btn">
@@ -101,7 +101,7 @@ const Category=(props)=>{
                                                         </Link>
                                                     </div>
                                                     <div className="product-icon">
-                                                        <a href="#"><img src="/images/wishlist-white-icon.svg" alt="Wishlist" /></a>
+                                                        <a href="#wishlistitem"><img src="/images/wishlist-white-icon.svg" alt="Wishlist" /></a>
                                                     </div>
                                                 </div>
                                             </div>
